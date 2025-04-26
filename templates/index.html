@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Numbers</title>
+</head>
+<body>
+    <h1>Add Two Numbers</h1>
+    <form method="POST">
+        <input type="text" name="num1" placeholder="Enter first number" required>
+        +
+        <input type="text" name="num2" placeholder="Enter second number" required>
+        <br><br>
+        <input type="submit" value="Add">
+    </form>
+
+    {% if result is not none %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>

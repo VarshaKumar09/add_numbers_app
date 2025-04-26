@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-
+import os
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
@@ -15,4 +15,5 @@ def add_numbers():
     return render_template('index.html', result=result)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Default to 5000 if not set
+    app.run(host="0.0.0.0", port=port, debug=True)
